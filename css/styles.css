@@ -1,0 +1,62 @@
+
+.en{
+    color:#333;
+}
+ .es{
+   color:#00a1ff;
+ }
+.check{
+  position: relative;
+  width:50px;
+
+}
+
+.check:before{
+  content: '';
+  position:absolute;
+  width: 50px;
+  height: 25px;
+  background: #333;
+  border-radius: 25px;
+}
+
+.check:after{
+  
+  content: '';
+  position:absolute;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 25px;
+  transition: 0.25s;
+  border: 2px solid #333;
+  box-sizing: boder-box;
+}
+
+.check:checked:after{
+left: 25px;
+border:2px solid #00a1ff;
+
+}
+
+.check:checked:before{
+  background: #00a1ff;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 70%;
+  }
+}
